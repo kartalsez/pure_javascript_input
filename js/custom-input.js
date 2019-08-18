@@ -4,16 +4,13 @@
 // @ Event methods
 // -----------------------------------------------------------------------------------------------------
 
-// TODO: onKeyUp function created instead of onChange
 const onKeyUp = () => {
     const value = getValue('myInput');
     setClearButtonVisibility(isEmptyOrNullOrUndefined(value));
 };
 
 const onChange = () => {
-};
-
-const onFocus = () => {
+    console.log('You changed this input value!');
 };
 
 const onClearInput = () => {
@@ -30,10 +27,6 @@ function setClearButtonVisibility(isEmpty){
     clearButton.style.visibility = isEmpty ? 'hidden' : 'visible';
 }
 
-function isEmptyOrNullOrUndefined(val){
-    return val === undefined || val === '' || val === null ? true : false;
-}
-
 function getValue(id){
     const myInput = document.getElementById(id);
     return myInput.value;
@@ -46,10 +39,14 @@ function setValue(id, val){
 
 function setDisabled(id){
     const myInput = document.getElementById(id);
-    myInput.disable();
+    myInput.disabled = true;
 }
 
 function setEnabled(id){
     const myInput = document.getElementById(id);
-    myInput.enable();
+    myInput.disabled = false;
+}
+
+function isEmptyOrNullOrUndefined(val){
+    return val === undefined || val === '' || val === null ? true : false;
 }
