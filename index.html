@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customized Input Component</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/custom-input.js"></script>
+    </head>
+    <body>
+    <main>
+        <header></header>
+        <article>
+            <label> Lokasyon </label>
+            <section class="input-section">
+                <input
+                        id="myInput"
+                        type="text"
+                        value=""
+                        onkeyup="onKeyUp()"
+                        onchange="onChange()"
+                        onfocus="onFocus()"
+                        placeholder="Enter something..."/>
+                <span
+                        id="clearButton"
+                        onclick="onClearInput()">x</span>
+            </section>
+        </article>
+        <footer></footer>
+    </main>
+    </body>
+</html>
